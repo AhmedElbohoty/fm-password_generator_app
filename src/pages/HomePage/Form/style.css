@@ -6,8 +6,19 @@
   background-color: var(--c-dark-gray);
 }
 
+.form-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
 @container sect (max-width: 343px) {
   .form {
     padding: 16px;
+  }
+
+  .form-checkbox {
+    gap: 16px;
   }
 }

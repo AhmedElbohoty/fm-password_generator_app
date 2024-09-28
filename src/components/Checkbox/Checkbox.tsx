@@ -1,3 +1,7 @@
+import { useId } from "react";
+
+import CheckIcon from "assets/icons/check.svg";
+
 // CSS prefix: .checkbox-
 import "./style.css";
 
@@ -8,11 +12,21 @@ type CheckboxTypes = {
 };
 
 function Checkbox({ label, checked, onChange }: CheckboxTypes) {
+  const id = useId();
+
   return (
-    <label className="checkbox-container">
-      <input type="checkbox" checked={checked} onChange={onChange} />
-      <span className="checkmark"></span>
-      {label}
+    <label htmlFor={id} className="checkbox-cont">
+      <input
+        id={id}
+        className="checkbox-inp"
+        type="checkbox"
+        checked={checked}
+        onChange={onChange}
+      />
+      <span className="checkbox-mark">
+        <CheckIcon />
+      </span>
+      <span className="checkbox-label">{label}</span>
     </label>
   );
 }
