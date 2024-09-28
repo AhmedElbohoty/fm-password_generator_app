@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../assets/fonts/JetBrainsMono-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: var(--font-weight);
+  font-style: normal;
+}

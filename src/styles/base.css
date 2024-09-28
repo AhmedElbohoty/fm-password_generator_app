@@ -1,4 +1,25 @@
 :root {
+  /* Colors */
+  --c-black: #24232c;
+  --c-dark-gray: #18171f;
+  --c-medium-gray: #817d92;
+  --c-light-gray: #e6e5ea;
+  --c-neon-green: #a4ffaf;
+  --c-red: #f64a4a;
+  --c-orange: #fb7c58;
+  --c-yellow: #f8cd65;
+
+  /* Typography */
+  --font-family: "JetBrains Mono", monospace;
+  --font-weight: 700;
+  --font-size-body: 18px;
+  --line-height-body: 23px;
+  --font-size-heading-l: 32px;
+  --line-height-heading-l: 43px;
+  --font-size-heading-m: 24px;
+  --line-height-heading-m: 31px;
+
+  /* Transition */
   --transition-duration: 400ms;
   --transition-timing-function: ease-in-out;
 }
@@ -21,8 +42,9 @@ body,
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif, sans-serif;
-  font-variant-ligatures: none;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  font-variant-ligatures: normal;
   font-feature-settings: unset;
 }
 
