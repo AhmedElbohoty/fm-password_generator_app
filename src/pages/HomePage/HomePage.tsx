@@ -1,4 +1,5 @@
 import Password from "pages/HomePage/Password/Password";
+import Form from "pages/HomePage/Form/Form";
 
 // CSS prefix: .homepage-
 import "./style.css";
@@ -10,6 +11,8 @@ function HomePage() {
         <h1 className="homepage-h1">Password Generator</h1>
 
         <Password value="P4$5W0rD!" />
+
+        <Form />
       </section>
     </main>
   );

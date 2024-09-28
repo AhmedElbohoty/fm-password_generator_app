@@ -54,8 +54,9 @@ a {
 button,
 textarea {
   border: none;
-  font-size: 100%;
   background-color: transparent;
+  font-size: 100%;
+  font-weight: inherit;
   font-family: inherit;
 }
 
