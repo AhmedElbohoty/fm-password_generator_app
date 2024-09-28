@@ -1,7 +1,7 @@
 :root {
   /* Colors */
-  --c-black: #24232c;
-  --c-dark-gray: #18171f;
+  --c-black: #18171f;
+  --c-dark-gray: #24232c;
   --c-medium-gray: #817d92;
   --c-light-gray: #e6e5ea;
   --c-neon-green: #a4ffaf;
@@ -12,12 +12,10 @@
   /* Typography */
   --font-family: "JetBrains Mono", monospace;
   --font-weight: 700;
-  --font-size-body: 18px;
-  --line-height-body: 23px;
-  --font-size-heading-l: 32px;
-  --line-height-heading-l: 43px;
-  --font-size-heading-m: 24px;
-  --line-height-heading-m: 31px;
+  --font-size-s: 16px;
+  --font-size-m: 18px;
+  --font-size-l: 24px;
+  --font-size-xl: 32px;
 
   /* Transition */
   --transition-duration: 400ms;
@@ -42,6 +40,7 @@ body,
 }
 
 body {
+  background-color: var(--c-black);
   font-family: var(--font-family);
   font-weight: var(--font-weight);
   font-variant-ligatures: normal;
@@ -69,6 +68,8 @@ svg {
 }
 
 input {
+  min-width: 0;
+  border: none;
   outline: none;
   font-family: inherit;
   background-color: transparent;

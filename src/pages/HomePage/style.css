@@ -1,0 +1,34 @@
+.homepage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage-sect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 343px;
+  max-width: 540px;
+  margin: 64px 16px;
+  container-name: sect;
+  container-type: inline-size;
+}
+
+.homepage-h1 {
+  margin-bottom: 31px;
+  font-size: var(--font-size-l);
+  line-height: 32px;
+  color: var(--c-medium-gray);
+}
+
+@container sect (max-width: 343px) {
+  .homepage-h1 {
+    margin-bottom: 16px;
+    font-size: var(--font-size-s);
+    line-height: 21px;
+  }
+}

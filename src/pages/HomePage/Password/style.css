@@ -1,0 +1,93 @@
+.password-field {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 32px;
+  margin-bottom: 24px;
+  background-color: var(--c-dark-gray);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.password-field[data-copied="true"] {
+  cursor: default;
+}
+
+.password-value-inp {
+  color: var(--c-light-gray);
+  font-size: var(--font-size-xl);
+  line-height: 42px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: inherit;
+}
+
+.password-value-inp::placeholder {
+  opacity: 0.25;
+}
+
+.password-copy-cont {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.password-copy-label {
+  opacity: 0;
+  color: var(--c-neon-green);
+  font-size: var(--font-size-m);
+  line-height: 24px;
+  text-transform: uppercase;
+  transition: opacity var(--transition-duration)
+    var(--transition-timing-function);
+}
+
+.password-field[data-copied="true"] .password-copy-label {
+  opacity: 1;
+}
+
+.password-copy-icon {
+  display: block;
+  width: 21px;
+  height: 24px;
+}
+
+.password-copy-icon .svg-copy {
+  width: 100%;
+  height: 100%;
+  cursor: inherit;
+}
+
+.password-copy-icon .svg-copy-path {
+  fill: var(--c-neon-green);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+}
+
+@media (hover: hover) {
+  .password-field[data-copied="false"]:hover .svg-copy-path {
+    fill: #ffffff;
+  }
+}
+
+@container sect (max-width: 343px) {
+  .password-field {
+    height: 64px;
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .password-value-inp {
+    font-size: var(--font-size-l);
+    line-height: 32px;
+  }
+
+  .password-copy-icon {
+    width: 18px;
+    height: 21px;
+  }
+}
