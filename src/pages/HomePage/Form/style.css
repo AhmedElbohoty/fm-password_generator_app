@@ -6,6 +6,10 @@
   background-color: var(--c-dark-gray);
 }
 
+.form-range {
+  margin-bottom: 32px;
+}
+
 .form-checkbox {
   display: flex;
   flex-direction: column;

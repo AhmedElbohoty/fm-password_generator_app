@@ -1,0 +1,83 @@
+.rangeslider-cont {
+  position: relative;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.rangeslider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.rangeslider:focus {
+  outline: none;
+}
+
+.rangeslider-active {
+  position: absolute;
+  left: 0;
+  height: 8px;
+  width: 200px;
+  background-color: var(--c-neon-green);
+}
+
+/* #region Chromium styles */
+/* slider track */
+.rangeslider::-webkit-slider-runnable-track {
+  background-color: var(--c-black);
+  border-radius: 0px;
+  height: 8px;
+}
+
+/* slider thumb */
+.rangeslider::-webkit-slider-thumb {
+  height: 28px;
+  width: 28px;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -10px;
+  background-color: var(--c-light-gray);
+  border-radius: 50%;
+  transition-property: scale;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.rangeslider:focus::-webkit-slider-thumb,
+.rangeslider:hover::-webkit-slider-thumb {
+  scale: 1.1;
+}
+/* #endregion Chromium styles */
+
+/* #region Firefox styles */
+/* slider track */
+.rangeslider::-moz-range-track {
+  background-color: var(--c-black);
+  border-radius: 0px;
+  height: 8px;
+}
+
+/* slider thumb */
+.rangeslider::-moz-range-thumb {
+  height: 28px;
+  width: 28px;
+  background-color: var(--c-light-gray);
+  border: none;
+  border-radius: 50%;
+  transition-property: scale;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.rangeslider:focus::-moz-range-thumb,
+.rangeslider:hover::-moz-range-thumb {
+  scale: 1.1;
+}
+/* #endregion Firefox styles */
+
+@container sect (max-width: 343px) {
+}

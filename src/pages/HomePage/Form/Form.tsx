@@ -1,6 +1,7 @@
-import GenerateButton from "pages/HomePage/GenerateButton/GenerateButton";
 import StrengthState from "components/StrengthState/StrengthStates";
 import Checkbox from "components/Checkbox/Checkbox";
+import RangeSlider from "pages/HomePage/RangeSlider/RangeSlider";
+import GenerateButton from "pages/HomePage/GenerateButton/GenerateButton";
 
 // CSS prefix: .form-
 import "./style.css";
@@ -8,6 +9,10 @@ import "./style.css";
 function Form() {
   return (
     <form className="form">
+      <div className="form-range">
+        <RangeSlider />
+      </div>
+
       <div className="form-checkbox">
         <Checkbox
           label="Include Uppercase Letters"
