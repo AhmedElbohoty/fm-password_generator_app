@@ -1,0 +1,72 @@
+.strstate {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  background-color: var(--c-black);
+}
+
+.strstate-label {
+  color: var(--c-medium-gray);
+  text-transform: uppercase;
+  font-size: var(--font-size-m);
+  line-height: 24px;
+}
+
+.strstate-bars-label {
+  margin-right: 16px;
+  margin-left: auto;
+  color: var(--c-light-gray);
+  font-size: var(--font-size-m);
+  line-height: 24px;
+}
+
+.strstate-bars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.strstate-bar {
+  display: block;
+  width: 10px;
+  height: 28px;
+  border: var(--c-light-gray) solid 2px;
+  background-color: var(--c-black);
+  transition-property: border-color, background-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.strstate-bar[data-level="0"]:first-child {
+  border-color: var(--c-red);
+  background-color: var(--c-red);
+}
+
+.strstate-bar[data-level="1"]:nth-child(-n + 2) {
+  border-color: var(--c-orange);
+  background-color: var(--c-orange);
+}
+
+.strstate-bar[data-level="2"]:nth-child(-n + 3) {
+  border-color: var(--c-yellow);
+  background-color: var(--c-yellow);
+}
+
+.strstate-bar[data-level="4"] {
+  border-color: var(--c-neon-green);
+  background-color: var(--c-neon-green);
+}
+
+@container sect (max-width: 343px) {
+  .strstate {
+    padding: 0 16px;
+  }
+
+  .strstate-label {
+    font-size: var(--font-size-s);
+    line-height: 21px;
+  }
+}

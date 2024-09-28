@@ -1,4 +1,5 @@
 import GenerateButton from "pages/HomePage/GenerateButton/GenerateButton";
+import StrengthState from "components/StrengthState/StrengthStates";
 import Checkbox from "components/Checkbox/Checkbox";
 
 // CSS prefix: .form-
@@ -21,6 +22,11 @@ function Form() {
         <Checkbox label="Include Numbers" checked onChange={() => {}} />
         <Checkbox label="Include Symbols" checked={false} onChange={() => {}} />
       </div>
+
+      <div className="form-strength">
+        <StrengthState />
+      </div>
+
       <GenerateButton />
     </form>
   );
