@@ -15,7 +15,7 @@ function Checkbox({ label, checked, onChange }: CheckboxTypes) {
   const id = useId();
 
   return (
-    <label htmlFor={id} className="checkbox-cont">
+    <div className="checkbox-cont">
       <input
         id={id}
         className="checkbox-inp"
@@ -23,11 +23,13 @@ function Checkbox({ label, checked, onChange }: CheckboxTypes) {
         checked={checked}
         onChange={onChange}
       />
-      <span className="checkbox-mark">
+      <label htmlFor={id} className="checkbox-mark">
         <CheckIcon />
-      </span>
-      <span className="checkbox-label">{label}</span>
-    </label>
+      </label>
+      <label htmlFor={id} className="checkbox-label">
+        {label}
+      </label>
+    </div>
   );
 }
 

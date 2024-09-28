@@ -48,6 +48,7 @@
   color: var(--c-light-gray);
   font-size: var(--font-size-m);
   line-height: 24px;
+  cursor: pointer;
 }
 
 @container sect (max-width: 343px) {
