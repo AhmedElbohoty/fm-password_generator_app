@@ -1,0 +1,100 @@
+:root {
+  --transition-duration: 400ms;
+  --transition-timing-function: ease-in-out;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  font-variant-ligatures: none;
+  font-feature-settings: unset;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+textarea {
+  border: none;
+  font-size: 100%;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
+svg {
+  display: block;
+}
+
+input {
+  outline: none;
+  font-family: inherit;
+  background-color: transparent;
+}
+
+input::placeholder {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+}
+
+li {
+  list-style: none;
+  list-style-position: inside;
+}
+
+dialog {
+  border: none;
+  background-color: transparent;
+  max-width: unset;
+  max-height: unset;
+}
+
+dialog::backdrop {
+  background-color: transparent;
+}
+
+[popover] {
+  contain: layout style;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  overflow: visible;
+}
+
+.resize-animation-stopper {
+  --transition-duration: 0;
+}

@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Absolute path */
+    "baseUrl": "./",
+    "paths": {
+      "assets/*": ["./src/assets/*"],
+      "components/*": ["./src/components/*"],
+      "contexts/*": ["./src/contexts/*"],
+      "hooks/*": ["./src/hooks/*"],
+      "i18n/*": ["./src/i18n"],
+      "mocks/*": ["./src/mocks/*"],
+      "pages/*": ["./src/pages/*"],
+      "providers/*": ["./src/providers/*"],
+      "store/*": ["./src/store/*"],
+      "styles/*": ["./src/styles/*"],
+      "types/*": ["./src/types/*"],
+      "utils/*": ["./src/utils/*"],
+      "src/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}
