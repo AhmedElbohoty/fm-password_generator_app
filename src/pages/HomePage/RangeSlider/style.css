@@ -1,3 +1,7 @@
+.rangeslider-cont {
+  position: relative;
+}
+
 .rangeslider {
   --l: 8px;
   --thumb-size: 28px;

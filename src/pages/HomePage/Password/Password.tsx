@@ -2,19 +2,18 @@ import { useState } from "react";
 
 import CopyIcon from "assets/icons/copy.svg";
 
+import { useAppContext } from "contexts/appContext";
+
 // CSS prefix: .password-
 import "./style.css";
 
-type PasswordType = {
-  value: string;
-};
-
-function Password({ value }: PasswordType) {
+function Password() {
+  const { password } = useAppContext();
   const [copied, setCopied] = useState(false);
 
   function handleCopy() {
-    if (!value || copied) return;
-    navigator.clipboard.writeText(value);
+    if (!password || copied) return;
+    navigator.clipboard.writeText(password);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }
@@ -24,7 +23,7 @@ function Password({ value }: PasswordType) {
       <input
         type="text"
         className="password-value-inp"
-        value={value}
+        value={password}
         placeholder="P4$5W0rD!"
         readOnly
         onChange={() => {}}

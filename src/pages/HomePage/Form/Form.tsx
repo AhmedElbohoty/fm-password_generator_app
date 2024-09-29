@@ -1,30 +1,46 @@
-import { useContext } from "react";
+import { type FormEvent } from "react";
 
-import StrengthState from "components/StrengthState/StrengthStates";
+import StrengthState from "pages/HomePage/StrengthState/StrengthStates";
 import Checkbox from "components/Checkbox/Checkbox";
 import CharLength from "pages/HomePage/CharLength/CharLength";
 import RangeSlider from "pages/HomePage/RangeSlider/RangeSlider";
 import GenerateButton from "pages/HomePage/GenerateButton/GenerateButton";
 
-import { AppContext } from "contexts/appContext";
+import { useAppContext } from "contexts/appContext";
+import { generatePassword } from "utils/helpers";
 
 // CSS prefix: .form-
 import "./style.css";
 
 function Form() {
   const {
-    lowerCase,
-    setLowerCase,
-    upperCase,
-    setUpperCase,
-    incNumbers,
-    setIncNumbers,
-    incSymbols,
-    setIncSymbols,
-  } = useContext(AppContext);
+    charLength,
+    includeLowercase,
+    setIncludeLowercase,
+    includeUppercase,
+    setIncludeUppercase,
+    includeNumbers,
+    setIncludeNumbers,
+    includeSymbols,
+    setIncludeSymbols,
+    setPassword,
+  } = useAppContext();
+
+  function onSubmit(e: FormEvent) {
+    e.preventDefault();
+
+    const password = generatePassword({
+      charLength,
+      includeUppercase,
+      includeLowercase,
+      includeNumbers,
+      includeSymbols,
+    });
+    setPassword(password);
+  }
 
   return (
-    <form className="form">
+    <form className="form" onSubmit={onSubmit}>
       <div className="form-range">
         <CharLength />
         <RangeSlider />
@@ -33,23 +49,23 @@ function Form() {
       <div className="form-checkbox">
         <Checkbox
           label="Include Uppercase Letters"
-          checked={upperCase}
-          onChange={() => setUpperCase(!upperCase)}
+          checked={includeUppercase}
+          onChange={() => setIncludeUppercase(!includeUppercase)}
         />
         <Checkbox
           label="Include Lowercase Letters"
-          checked={lowerCase}
-          onChange={() => setLowerCase(!lowerCase)}
+          checked={includeLowercase}
+          onChange={() => setIncludeLowercase(!includeLowercase)}
         />
         <Checkbox
           label="Include Numbers"
-          checked={incNumbers}
-          onChange={() => setIncNumbers(!incNumbers)}
+          checked={includeNumbers}
+          onChange={() => setIncludeNumbers(!includeNumbers)}
         />
         <Checkbox
           label="Include Symbols"
-          checked={incSymbols}
-          onChange={() => setIncSymbols(!incSymbols)}
+          checked={includeSymbols}
+          onChange={() => setIncludeSymbols(!includeSymbols)}
         />
       </div>
 

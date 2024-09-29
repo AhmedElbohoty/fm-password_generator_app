@@ -1,12 +1,10 @@
-import { useContext } from "react";
-
-import { AppContext } from "contexts/appContext";
+import { useAppContext } from "contexts/appContext";
 
 // CSS prefix: .charlength-
 import "./style.css";
 
 function CharLength() {
-  const { charLength } = useContext(AppContext);
+  const { charLength } = useAppContext();
 
   return (
     <div className="charlength-cont">

@@ -1,30 +1,34 @@
 import { createContext, useContext } from "react";
 import type { SetStateAction, Dispatch } from "react";
 
-interface appContext {
+export interface appContext {
+  password: string;
+  setPassword: Dispatch<SetStateAction<string>>;
   charLength: number;
   setCharLength: Dispatch<SetStateAction<number>>;
-  lowerCase: boolean;
-  setLowerCase: Dispatch<SetStateAction<boolean>>;
-  upperCase: boolean;
-  setUpperCase: Dispatch<SetStateAction<boolean>>;
-  incNumbers: boolean;
-  setIncNumbers: Dispatch<SetStateAction<boolean>>;
-  incSymbols: boolean;
-  setIncSymbols: Dispatch<SetStateAction<boolean>>;
+  includeLowercase: boolean;
+  setIncludeLowercase: Dispatch<SetStateAction<boolean>>;
+  includeUppercase: boolean;
+  setIncludeUppercase: Dispatch<SetStateAction<boolean>>;
+  includeNumbers: boolean;
+  setIncludeNumbers: Dispatch<SetStateAction<boolean>>;
+  includeSymbols: boolean;
+  setIncludeSymbols: Dispatch<SetStateAction<boolean>>;
 }
 
 const contextValue: appContext = {
+  password: "",
+  setPassword: () => {},
   charLength: 0,
   setCharLength: () => {},
-  lowerCase: false,
-  setLowerCase: () => {},
-  upperCase: false,
-  setUpperCase: () => {},
-  incNumbers: false,
-  setIncNumbers: () => {},
-  incSymbols: false,
-  setIncSymbols: () => {},
+  includeLowercase: false,
+  setIncludeLowercase: () => {},
+  includeUppercase: false,
+  setIncludeUppercase: () => {},
+  includeNumbers: false,
+  setIncludeNumbers: () => {},
+  includeSymbols: false,
+  setIncludeSymbols: () => {},
 };
 
 export const AppContext = createContext(contextValue);

@@ -3,23 +3,26 @@ import { useState, type ReactNode } from "react";
 import { AppContext } from "contexts/appContext";
 
 function AppProvider({ children }: { children: ReactNode }) {
-  const [charLength, setCharLength] = useState(1);
-  const [lowerCase, setLowerCase] = useState(true);
-  const [upperCase, setUpperCase] = useState(true);
-  const [incNumbers, setIncNumbers] = useState(true);
-  const [incSymbols, setIncSymbols] = useState(false);
+  const [password, setPassword] = useState("");
+  const [charLength, setCharLength] = useState(3);
+  const [includeLowercase, setIncludeLowercase] = useState(true);
+  const [includeUppercase, setIncludeUppercase] = useState(true);
+  const [includeNumbers, setIncludeNumbers] = useState(true);
+  const [includeSymbols, setIncludeSymbols] = useState(false);
 
   const contextValue = {
+    password,
+    setPassword,
     charLength,
     setCharLength,
-    lowerCase,
-    setLowerCase,
-    upperCase,
-    setUpperCase,
-    incNumbers,
-    setIncNumbers,
-    incSymbols,
-    setIncSymbols,
+    includeLowercase,
+    setIncludeLowercase,
+    includeUppercase,
+    setIncludeUppercase,
+    includeNumbers,
+    setIncludeNumbers,
+    includeSymbols,
+    setIncludeSymbols,
   };
 
   return (

@@ -5,7 +5,7 @@ import "./style.css";
 
 function GenerateButton() {
   return (
-    <button className="genbutton">
+    <button className="genbutton" type="submit">
       <span className="genbutton-label">GENERATE</span>
       <span className="genbutton-icon">
         <ArrowIcon />
