@@ -53,6 +53,11 @@
 
 @container sect (max-width: 343px) {
   .checkbox-cont {
+    height: 21px;
     gap: 16px;
+  }
+
+  .checkbox-label {
+    font-size: var(--font-size-s);
   }
 }
