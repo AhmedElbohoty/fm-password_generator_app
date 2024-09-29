@@ -25,6 +25,7 @@ function RangeSlider() {
         onChange={onChange}
         min={min}
         max={MAX_CHARS_LENGTH}
+        aria-label="Input range for characters length"
       />
       <span style={{ width }} className="rangeslider-active"></span>
     </div>

@@ -10,6 +10,7 @@ const LEVELS = ["TOO WEAK!", "WEAK", "MEDIUM", "STRONG"];
 function StrengthState() {
   const { password } = useAppContext();
   const state = useMemo(() => {
+    if (!password) return -1;
     if (password.length <= 4) return 1;
 
     let score = 0;
