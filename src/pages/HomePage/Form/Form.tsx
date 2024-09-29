@@ -1,5 +1,6 @@
 import StrengthState from "components/StrengthState/StrengthStates";
 import Checkbox from "components/Checkbox/Checkbox";
+import CharLength from "pages/HomePage/CharLength/CharLength";
 import RangeSlider from "pages/HomePage/RangeSlider/RangeSlider";
 import GenerateButton from "pages/HomePage/GenerateButton/GenerateButton";
 
@@ -10,6 +11,7 @@ function Form() {
   return (
     <form className="form">
       <div className="form-range">
+        <CharLength />
         <RangeSlider />
       </div>
 

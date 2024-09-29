@@ -21,8 +21,9 @@
   position: absolute;
   left: 0;
   height: 8px;
-  width: 200px;
   background-color: var(--c-neon-green);
+  mask: radial-gradient(1px 60% at right, #0000 calc(100% - 1px), #000);
+  pointer-events: none;
 }
 
 /* #region Chromium styles */
@@ -42,14 +43,15 @@
   margin-top: -10px;
   background-color: var(--c-light-gray);
   border-radius: 50%;
-  transition-property: scale;
+  border: var(--c-light-gray) solid 2px;
+  transition-property: border-color, background-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 
-.rangeslider:focus::-webkit-slider-thumb,
 .rangeslider:hover::-webkit-slider-thumb {
-  scale: 1.1;
+  background-color: var(--c-black);
+  border-color: var(--c-neon-green);
 }
 /* #endregion Chromium styles */
 
@@ -68,14 +70,16 @@
   background-color: var(--c-light-gray);
   border: none;
   border-radius: 50%;
-  transition-property: scale;
+  border: var(--c-light-gray) solid 2px;
+  transition-property: border-color, background-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 
 .rangeslider:focus::-moz-range-thumb,
 .rangeslider:hover::-moz-range-thumb {
-  scale: 1.1;
+  background-color: var(--c-black);
+  border-color: var(--c-neon-green);
 }
 /* #endregion Firefox styles */
 

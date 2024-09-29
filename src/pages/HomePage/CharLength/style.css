@@ -1,0 +1,36 @@
+.charlength-cont {
+  height: 43px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.charlength-label {
+  color: var(--c-light-gray);
+  font-size: var(--font-size-m);
+  line-height: 24px;
+}
+
+.charlength-value {
+  color: var(--c-neon-green);
+  font-size: var(--font-size-xl);
+  line-height: 42px;
+}
+
+@container sect (max-width: 343px) {
+  .charlength-cont {
+    height: 31px;
+    margin-bottom: 8px;
+  }
+
+  .charlength-label {
+    font-size: var(--font-size-s);
+    line-height: 21px;
+  }
+
+  .charlength-value {
+    font-size: var(--font-size-l);
+    line-height: 24px;
+  }
+}

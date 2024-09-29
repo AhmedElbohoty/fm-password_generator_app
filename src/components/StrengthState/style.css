@@ -55,7 +55,7 @@
   background-color: var(--c-yellow);
 }
 
-.strstate-bar[data-level="4"] {
+.strstate-bar[data-level="3"] {
   border-color: var(--c-neon-green);
   background-color: var(--c-neon-green);
 }
