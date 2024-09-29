@@ -10,7 +10,7 @@ function HomePage() {
       <section className="homepage-sect">
         <h1 className="homepage-h1">Password Generator</h1>
 
-        <Password value="P4$5W0rD!" />
+        <Password />
 
         <Form />
       </section>
