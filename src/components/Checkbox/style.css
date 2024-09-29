@@ -51,7 +51,7 @@
   cursor: pointer;
 }
 
-@container sect (max-width: 343px) {
+@container sect (max-width: 390px) {
   .checkbox-cont {
     height: 21px;
     gap: 16px;

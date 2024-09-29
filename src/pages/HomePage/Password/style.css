@@ -74,7 +74,7 @@
   }
 }
 
-@container sect (max-width: 343px) {
+@container sect (max-width: 390px) {
   .password-field {
     height: 64px;
     padding: 0 16px;

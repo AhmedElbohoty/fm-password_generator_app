@@ -4,7 +4,7 @@ import "./style.css";
 const LEVELS = ["TOO WEAK!", "WEAK", "MEDIUM", "STRONG"];
 
 function StrengthState() {
-  const state = 2;
+  const state = 0;
 
   return (
     <div className="strstate">

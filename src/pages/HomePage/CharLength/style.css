@@ -18,7 +18,7 @@
   line-height: 42px;
 }
 
-@container sect (max-width: 343px) {
+@container sect (max-width: 390px) {
   .charlength-cont {
     height: 31px;
     margin-bottom: 8px;

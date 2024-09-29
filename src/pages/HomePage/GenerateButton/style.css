@@ -39,7 +39,7 @@
   }
 }
 
-@container sect (max-width: 343px) {
+@container sect (max-width: 390px) {
   .genbutton {
     height: 56px;
     gap: 16px;

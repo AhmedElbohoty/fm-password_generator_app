@@ -23,7 +23,7 @@
   margin-bottom: 32px;
 }
 
-@container sect (max-width: 343px) {
+@container sect (max-width: 390px) {
   .form {
     padding: 16px;
   }

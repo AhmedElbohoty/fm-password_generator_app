@@ -1,4 +1,6 @@
-import { type ChangeEvent, useState } from "react";
+import { type ChangeEvent, useContext } from "react";
+
+import { AppContext } from "contexts/appContext";
 
 // CSS prefix: .rangeslider-
 import "./style.css";
@@ -7,26 +9,24 @@ const MIN = 1;
 const MAX = 20;
 
 function RangeSlider() {
-  const [chars, setChars] = useState(0);
+  const { charLength, setCharLength } = useContext(AppContext);
 
   function onChange(e: ChangeEvent<HTMLInputElement>) {
-    setChars(Number(e.target.value));
+    setCharLength(Number(e.target.value));
   }
 
+  const width = `calc(${(charLength * 100) / MAX}% - 25px)`;
   return (
     <div className="rangeslider-cont">
       <input
         type="range"
         className="rangeslider"
-        value={chars}
+        value={charLength}
         onChange={onChange}
         min={MIN}
         max={MAX}
       />
-      <span
-        style={{ width: `calc(${(chars * 100) / MAX}% - 25px)` }}
-        className="rangeslider-active"
-      ></span>
+      <span style={{ width }} className="rangeslider-active"></span>
     </div>
   );
 }

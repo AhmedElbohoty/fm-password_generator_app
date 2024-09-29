@@ -60,7 +60,7 @@
   background-color: var(--c-neon-green);
 }
 
-@container sect (max-width: 343px) {
+@container sect (max-width: 390px) {
   .strstate {
     padding: 0 16px;
   }

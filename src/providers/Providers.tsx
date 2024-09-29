@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 
-import WindowSizeProvider from "providers/WindowSizeProvider";
+import AppProvider from "providers/AppProvider";
 
 function Providers({ children }: { children: ReactNode }) {
-  return <WindowSizeProvider>{children}</WindowSizeProvider>;
+  return <AppProvider>{children}</AppProvider>;
 }
 
 export default Providers;

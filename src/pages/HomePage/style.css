@@ -25,7 +25,7 @@
   color: var(--c-medium-gray);
 }
 
-@container sect (max-width: 343px) {
+@container sect (max-width: 390px) {
   .homepage-h1 {
     margin-bottom: 16px;
     font-size: var(--font-size-s);
